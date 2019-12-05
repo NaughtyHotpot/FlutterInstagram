@@ -48,6 +48,7 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - assets/images/insta_logo.png
+    - assets/images/facebook_logo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -71,6 +72,17 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: Insta
+      fonts:
+        - asset: assets/fonts/Insta.otf
+    - family: AvenyT
+      fonts:
+        - asset: assets/fonts/AvenyTRegular.otf
+        - asset: assets/fonts/AvenyTMedium.otf
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/Billabong.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

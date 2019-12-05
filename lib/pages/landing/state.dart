@@ -1,10 +1,11 @@
 import 'package:fish_redux/fish_redux.dart';
 
 class LandingState implements Cloneable<LandingState> {
-
+  bool isShowLogin = false;
   @override
   LandingState clone() {
-    return LandingState();
+    return LandingState()
+    ..isShowLogin = isShowLogin;
   }
 }
 

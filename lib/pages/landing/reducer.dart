@@ -6,12 +6,11 @@ import 'state.dart';
 Reducer<LandingState> buildReducer() {
   return asReducer(
     <Object, Reducer<LandingState>>{
-      LandingAction.action: _onAction,
+      LandingAction.showLogin: showLogin,
     },
   );
 }
 
-LandingState _onAction(LandingState state, Action action) {
-  final LandingState newState = state.clone();
-  return newState;
+LandingState showLogin(LandingState state, Action action) {
+  return state.clone()..isShowLogin = action.payload;
 }
