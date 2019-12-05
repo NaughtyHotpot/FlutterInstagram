@@ -1,7 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 
 //TODO replace with your own action
-enum LandingAction { showLogin, login }
+enum LandingAction { showLogin, login, register }
 
 class LandingActionCreator {
   static Action onLogin() {
@@ -10,4 +10,9 @@ class LandingActionCreator {
   static Action showLogin(bool isShow) {
     return Action(LandingAction.showLogin, payload: isShow);
   }
+
+  static Action onRegister() {
+    return Action(LandingAction.register);
+  }
+
 }

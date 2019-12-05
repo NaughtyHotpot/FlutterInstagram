@@ -7,9 +7,14 @@ import 'state.dart';
 Effect<LandingState> buildEffect() {
   return combineEffects(<Object, Effect<LandingState>>{
     LandingAction.login: _onLogin,
+    LandingAction.register: _onRegister,
   });
 }
 
 void _onLogin(Action action, Context<LandingState> ctx) {
   NavigatorUtil.push(ctx.context, RoutePath.login, null);
+}
+
+void _onRegister(Action action, Context<LandingState> ctx) {
+  NavigatorUtil.push(ctx.context, RoutePath.register, null);
 }

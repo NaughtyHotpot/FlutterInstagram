@@ -1,5 +1,6 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram/widgets/my_button.dart';
 
 import 'action.dart';
 import 'state.dart';
@@ -10,15 +11,9 @@ Widget buildView(LandingState state, Dispatch dispatch, ViewService viewService)
       children: <Widget>[
         Padding(
           padding: EdgeInsets.only(left: 32, right: 32, top: 32, bottom: 20),
-          child: ButtonTheme(
-            minWidth: 360,
-            height: 40,
-            child: RaisedButton(
-              onPressed: (){},
-              color: Colors.blue,
-              child: Text("Create New Account", style: TextStyle(color: Colors.white),),
-            ),
-          ),
+          child: MyButton("Create New Account",(){
+            dispatch(LandingActionCreator.onRegister());
+          })
         ),
         GestureDetector(
           onTap: (){
@@ -63,19 +58,9 @@ Widget buildView(LandingState state, Dispatch dispatch, ViewService viewService)
             ),
           ),
         ),
-        ButtonTheme(
-          minWidth: MediaQuery.of(viewService.context).size.width-64,
-          child: RaisedButton(
-            shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(4.0),
-                side: BorderSide(color: Colors.blue[300])
-            ),
-            color: Colors.blue[300],
-            child: Text("Log In", style: TextStyle(color: Colors.white)),
-            onPressed: (){
-            },
-          ),
-        ),
+        MyButton("Log In", (){
+
+        }),
         Container(
           padding: EdgeInsets.only(top: 4),
           child: Row(

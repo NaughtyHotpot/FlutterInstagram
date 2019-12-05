@@ -1,4 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:flutter_instagram/pages/register/page.dart';
 
 import 'pages/landing/page.dart';
 import 'pages/login/page.dart';
@@ -22,6 +23,7 @@ class AppRoute {
     if (_global == null) {
       _global = PageRoutes(pages: <String, Page<Object, dynamic>>{
         RoutePath.landing: LandingPage(),
+        RoutePath.register: RegisterPage(),
         RoutePath.login: LoginPage(),
       });
     }
@@ -31,5 +33,6 @@ class AppRoute {
 
 class RoutePath {
   static const String landing = 'landing';
+  static const String register = 'register';
   static const String login = 'login';
 }
